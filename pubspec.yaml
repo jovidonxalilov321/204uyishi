@@ -59,8 +59,19 @@ flutter:
   uses-material-design: true
   assets:
     - TravelAssets/icons/
+    - TravelAssets/images/
     - TravelAssets/images/places/
     - TravelAssets/images/offers/
+
+  fonts:
+    - family: Urbanist
+      fonts:
+        - asset: TravelAssets/fonts/Urbanist/Urbanist-Regular.ttf
+
+
+
+
+
 
   # To add assets to your application, add an assets section, like this:
   # assets:
