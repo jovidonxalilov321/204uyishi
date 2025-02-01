@@ -15,11 +15,11 @@ class Buyurtma extends StatelessWidget {
         borderRadius: BorderRadius.circular(100),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.1), // Soyaning rangi
-            blurRadius: 10, // Tarqalish radiusi
-            spreadRadius: 2, // Soyaning kengligi
+            color: Colors.black.withOpacity(0.1),
+            blurRadius: 10,
+            spreadRadius: 2,
             offset: Offset(
-                0, -4), // Soyaning joylashuvi (0 - X, -4 - Y yo‘nalishda)
+                0, -4),
           ),
         ],
       ),

@@ -1,3 +1,4 @@
+import 'package:dars302/register/pinpage.dart';
 import 'package:dars302/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -31,16 +32,11 @@ class RegisterPage extends StatelessWidget {
           elevation: 0,
           title: Row(
             children: [
-              GestureDetector(
-                onTap: () {
-                  Navigator.pop(context);
-                },
-                child: SvgPicture.asset(
-                  'TravelAssets/icons/back-arrow.svg',
-                  width: 24,
-                  height: 24,
-                  color: AppColors.Yashil,
-                ),
+              SvgPicture.asset(
+                'TravelAssets/icons/back-arrow.svg',
+                width: 24,
+                height: 24,
+                color: AppColors.Yashil,
               ),
             ],
           ),
@@ -75,7 +71,6 @@ class RegisterPage extends StatelessWidget {
               width: double.infinity,
               height: 60,
               padding: EdgeInsets.symmetric(horizontal: 20),
-              // Ichki bo'sh joy
               decoration: BoxDecoration(
                 color: Color(0xffFAFAFA),
                 borderRadius: BorderRadius.circular(50),
@@ -91,7 +86,7 @@ class RegisterPage extends StatelessWidget {
                       color: Color(0xff4B4B4B),
                     ),
                   ),
-                  SizedBox(width: 10), // Icon bilan text orasini ajratish
+                  SizedBox(width: 10),
                   Expanded(
                     child: TextField(
                       keyboardType: TextInputType.phone,
@@ -116,7 +111,10 @@ class RegisterPage extends StatelessWidget {
             SizedBox(height: 20),
             GestureDetector(
               onTap: () {
-                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PagePin()),
+                );
               },
               child: Container(
                 width: 380,
@@ -130,7 +128,8 @@ class RegisterPage extends StatelessWidget {
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 16,
-                        fontWeight: FontWeight.bold),
+                        fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ),

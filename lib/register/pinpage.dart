@@ -1,23 +1,8 @@
+import 'package:dars302/register/homeregister.dart';
 import 'package:dars302/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: PagePin(),
-    );
-  }
-}
 
 class PagePin extends StatefulWidget {
   const PagePin({super.key});
@@ -28,7 +13,7 @@ class PagePin extends StatefulWidget {
 
 class _PagePinState extends State<PagePin> {
   List<TextEditingController> controllers =
-      List.generate(4, (index) => TextEditingController());
+  List.generate(4, (index) => TextEditingController());
   List<FocusNode> focusNodes = List.generate(4, (index) => FocusNode());
   List<Color> borderColors = List.generate(4, (index) => Colors.grey.shade400);
 
@@ -72,23 +57,31 @@ class _PagePinState extends State<PagePin> {
           title: Row(
             children: [
               GestureDetector(
-                child: SvgPicture.asset(
-                  'TravelAssets/icons/back-arrow.svg',
-                  width: 20,
-                  height: 20,
-                  color: AppColors.Yashil,
+                onTap:  () {
+                  SvgPicture.asset(
+                    'TravelAssets/icons/back-arrow.svg',
+                    width: 24,
+                    height: 24,
+                    color: AppColors.Yashil,
+                  );
+                },
+                child: Text(
+                  'Kodni kiriting',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 24,
+                    fontFamily: "Urbanist",
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
+                // child: SvgPicture.asset(
+                  // 'TravelAssets/icons/back-arrow.svg',
+                  // width: 20,
+                  // height: 20,
+                  // color: AppColors.Yashil,
+                // ),
               ),
               SizedBox(width: 16),
-              Text(
-                'Kodni kiriting',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 24,
-                  fontFamily: "Urbanist",
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
             ],
           ),
         ),
